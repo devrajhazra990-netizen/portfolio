@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devraj Hazra | Computer Science Engineer & Web Developer</title>
+  <meta name="description" content="Portfolio of Devraj Hazra - Computer Science Engineering Student & Web Developer specializing in C/C++, Python, Web Development, SQL, AI Tools, and Linux Systems.">
+  <meta name="keywords" content="Devraj Hazra, Computer Science Engineer, Web Developer, C++, Python, SQL, B.P. Poddar Institute of Management and Technology, Portfolio">
+  <meta name="author" content="Devraj Hazra">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Devraj Hazra | Computer Science Engineer Portfolio">
+  <meta property="og:description" content="Explore interactive 3D WebGL experiences, web applications, and computer science projects by Devraj Hazra.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- WebGL 3D Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Floating Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <span class="logo-icon">D</span>
+        Devraj
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.85rem;">
+          Hire Me <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+        </a>
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Content Left -->
+          <div class="hero-content">
+            <div class="badge">
+              <span class="pulse"></span> Open for Internships, Projects & Hiring
+            </div>
+            
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Devraj Hazra</span>
+            </h1>
+
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 600; color: var(--accent-cyan); margin-bottom: 1rem;">
+              Computer Science Engineer & Web Developer
+            </h2>
+
+            <p class="hero-desc">
+              B.Tech student in <strong>Computer Science & Engineering</strong> at <strong>B.P. Poddar Institute of Management and Technology</strong>. Passionate about Web Development, Problem Solving, C/C++, Python, SQL Databases, AI Tools, and Linux Systems.
+            </p>
+
+            
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h3>B.Tech</h3>
+                <p>CSE Degree</p>
+              </div>
+              <div class="stat-item">
+                <h3>10+</h3>
+                <p>Tech Skills</p>
+              </div>
+              <div class="stat-item">
+                <h3>100%</h3>
+                <p>Problem Solving</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero 3D Holographic Avatar Frame Right -->
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-3d-container">
+              <div class="avatar-ring-outer"></div>
+              <div class="avatar-ring-inner">
+                <div class="avatar-img-box">
+                  <img src="assets/profile.jpg" alt="Devraj Hazra - Profile Photo">
+                </div>
+              </div>
+
+              <!-- Floating Badges -->
+              <div class="float-badge float-badge-1">
+                <i data-lucide="code" style="color: var(--accent-cyan);"></i> C++ & Python
+              </div>
+              <div class="float-badge float-badge-2">
+                <i data-lucide="globe" style="color: var(--accent-purple);"></i> Web Developer
+              </div>
+              <div class="float-badge float-badge-3">
+                <i data-lucide="bot" style="color: var(--accent-pink);"></i> AI Tools
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-tag">
+          <i data-lucide="user"></i> About Me
+        </div>
+        <h2 class="section-title">Computer Science & <span class="gradient-text">Engineering</span></h2>
+        <p class="section-subtitle">A dedicated CSE student combining fundamental engineering concepts with modern web technologies and AI productivity tools.</p>
+
+        <div class="about-grid">
+          <div class="glass-card about-text">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main);">Education & Background</h3>
+            <p>
+              I am pursuing my <strong>B.Tech in Computer Science & Engineering</strong> at <strong>B.P. Poddar Institute of Management and Technology</strong>.
+            </p>
+            <p>
+              My academic foundation covers core Computer Science subjects including Database Fundamentals, Computer Networks, Linux, and Algorithmic Problem Solving. I complement my engineering studies by building real-world Web Applications and leveraging AI Tools for software productivity.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-box">
+                <div class="feature-icon"><i data-lucide="graduation-cap"></i></div>
+                <div class="feature-info">
+                  <h4>College</h4>
+                  <p>B.P. Poddar Inst. of Mgmt & Tech</p>
+                </div>
+              </div>
+              <div class="feature-box">
+                <div class="feature-icon"><i data-lucide="book-open"></i></div>
+                <div class="feature-info">
+                  <h4>Degree</h4>
+                  <p>B.Tech in CSE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card" style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--text-main);">Technical Strengths</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+              <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                <span style="color: var(--accent-cyan); font-weight: bold;">01.</span>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">Programming & Algorithms</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">Strong logical reasoning and coding skills in C, C++, and Python.</p>
+                </div>
+              </li>
+              <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                <span style="color: var(--accent-purple); font-weight: bold;">02.</span>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">Web Development & AI Tools</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">Building responsive web interfaces with HTML, CSS, JavaScript, and integrating modern AI tools.</p>
+                </div>
+              </li>
+              <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                <span style="color: var(--accent-pink); font-weight: bold;">03.</span>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 0.2rem;">Core CS Systems</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem;">Proficient in SQL Databases, Computer Networks, Linux environment, and MS Office.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-tag">
+          <i data-lucide="cpu"></i> Technical Capabilities
+        </div>
+        <h2 class="section-title">Skills & <span class="gradient-text">Proficiency</span></h2>
+        <p class="section-subtitle">Programming languages, database technologies, OS, and productivity tools.</p>
+
+        <!-- Category Tabs -->
+        <div class="skills-tabs">
+          <button class="tab-btn active" data-filter="all">All Skills</button>
+          <button class="tab-btn" data-filter="languages">Languages</button>
+          <button class="tab-btn" data-filter="web">Web & AI</button>
+          <button class="tab-btn" data-filter="core">Core CS & Tools</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill: C++ -->
+          <div class="glass-card skill-card" data-category="languages">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="code"></i></div>
+                <div class="skill-name">C++</div>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: C -->
+          <div class="glass-card skill-card" data-category="languages">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="file-code"></i></div>
+                <div class="skill-name">C Language</div>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: Python -->
+          <div class="glass-card skill-card" data-category="languages">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="terminal"></i></div>
+                <div class="skill-name">Python</div>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: Web Dev & HTML -->
+          <div class="glass-card skill-card" data-category="web">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="globe"></i></div>
+                <div class="skill-name">HTML, CSS & Web Dev</div>
+              </div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: AI Tools -->
+          <div class="glass-card skill-card" data-category="web">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="bot"></i></div>
+                <div class="skill-name">AI Tools & Workflows</div>
+              </div>
+              <span class="skill-percent">94%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 94%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: SQL & Database Fundamentals -->
+          <div class="glass-card skill-card" data-category="core">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="database"></i></div>
+                <div class="skill-name">SQL & Database Fundamentals</div>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: Linux -->
+          <div class="glass-card skill-card" data-category="core">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="hard-drive"></i></div>
+                <div class="skill-name">Linux Systems</div>
+              </div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: Computer Networks -->
+          <div class="glass-card skill-card" data-category="core">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="network"></i></div>
+                <div class="skill-name">Computer Networks</div>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: Problem Solving -->
+          <div class="glass-card skill-card" data-category="core">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="brain"></i></div>
+                <div class="skill-name">Problem Solving</div>
+              </div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+
+          <!-- Skill: Microsoft Office -->
+          <div class="glass-card skill-card" data-category="core">
+            <div class="skill-header">
+              <div class="skill-title-box">
+                <div class="skill-icon"><i data-lucide="file-text"></i></div>
+                <div class="skill-name">Microsoft Office Suite</div>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    <!-- EDUCATION SECTION -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-tag">
+          <i data-lucide="graduation-cap"></i> Academic Journey
+        </div>
+        <h2 class="section-title">Education & <span class="gradient-text">Milestones</span></h2>
+        <p class="section-subtitle">Academic degree and engineering foundation.</p>
+
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="timeline-date">PURSUING DEGREE</div>
+              <h3 class="timeline-role">B.Tech in Computer Science & Engineering</h3>
+              <div class="timeline-company">B.P. Poddar Institute of Management and Technology</div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Focusing on Core Computer Science subjects: Data Structures, Database Management Systems (SQL), Computer Networks, Linux, and Web Technologies.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="timeline-date">SPECIALIZATION</div>
+              <h3 class="timeline-role">Web Development & AI Tools</h3>
+              <div class="timeline-company">Self-Driven & Project Building</div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Building modern responsive web interfaces, learning interactive WebGL 3D graphics, and utilizing cutting-edge AI tools for enhanced software development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-tag">
+          <i data-lucide="message-square"></i> Connect
+        </div>
+        <h2 class="section-title">Get In Touch With <span class="gradient-text">Devraj Hazra</span></h2>
+        <p class="section-subtitle">Open for internships, web development projects, and engineering opportunities.</p>
+
+        <div class="contact-grid">
+          <div class="glass-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem;">Contact Information</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Feel free to reach out to discuss project collaborations, hiring, or computer science technical topics!</p>
+
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="user"></i></div>
+                <div class="contact-detail">
+                  <h4>Name</h4>
+                  <p>Devraj Hazra</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="graduation-cap"></i></div>
+                <div class="contact-detail">
+                  <h4>Institute</h4>
+                  <p>B.P. Poddar Institute of Management and Technology</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                <div class="contact-detail">
+                  <h4>Email</h4>
+                  <a href="devrajhazr990@gmail.com">devrajhazra990@gmail.com</a>
+                </div>
+              </div>
+                </div class="contact-item">
+                <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                <div class="contact-detail">
+                  <h4>Location</h4>
+                  <p>Kolkata, West Bengal, India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" class="form-control" placeholder="mail id" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" placeholder="Project Inquiry / Hiring" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" placeholder="Hi Devraj, I would like to connect..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+                Send Message <i data-lucide="send"></i>
+              </button>
+              <div id="form-status" style="font-size: 0.9rem; text-align: center; margin-top: 0.5rem;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <a href="#" class="logo">
+        <span class="logo-icon">D</span>
+        Devraj Hazra
+      </a>
+
+      <p style="color: var(--text-dim); font-size: 0.9rem;">
+        &copy; 2026 Devraj Hazra | Computer Science Engineer & Web Developer
+      </p>
+
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="www.linkedin.com/in/devraj-hazra-761a32344" target="_blank" class="social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://www.facebook.com/share/1Bnp2kzCMp/" target="_blank" class="social-icon" aria-label="facebook"><i data-lucide="twitter"></i></a>
+        <a href=":devrajhazra@example.com" class="social-icon" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL POPUP -->
+  <div id="project-modal" class="modal-backdrop">
+    <div class="glass-card modal-box">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close modal"><i data-lucide="x"></i></button>
+      <div style="height: 280px; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
+        <img id="modal-img" src="" alt="Project Image" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <h3 id="modal-title" style="font-family: var(--font-heading); font-size: 1.75rem; margin-bottom: 1rem;">Project Title</h3>
+      <p id="modal-desc" style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.7;">Project Description</p>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 0.5rem;">Technologies Used:</h4>
+        <div id="modal-tags" class="project-tags"></div>
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <a href="https://facebook.com" target="_blank" class="btn btn-primary" style="font-size: 0.85rem;">Live Demo <i data-lucide="https://www.facebook.com/help/2053403608222571/?helpref=uf_share"></i></a>
+        <a href="https://github.com" target="_blank" class="btn btn-outline" style="font-size: 0.85rem;">View Source <i data-lucide="github.com"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
