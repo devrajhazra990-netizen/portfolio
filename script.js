@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initContactForm();
   initNavbarScroll();
+  initLiveClock();
 });
 
 /* ==========================================================================
@@ -280,27 +281,34 @@ function initModals() {
   const modalImg = document.getElementById('modal-img');
   const modalDesc = document.getElementById('modal-desc');
   const modalTags = document.getElementById('modal-tags');
+  const modalCracked = document.getElementById('modal-cracked');
 
   if (!modal) return;
 
   const projectDetails = {
     '1': {
-      title: 'Aether 3D Mesh & Scene Editor',
-      img: 'assets/project1.jpg',
-      desc: 'A high-performance browser-based 3D scene builder built with Three.js, WebGL, and React. Features real-time PBR material editing, shadow maps, camera viewports, GLTF/GLB export, and custom GLSL shader node creation.',
-      tags: ['Three.js', 'WebGL', 'GLSL Shaders', 'React', 'TypeScript']
+      title: 'AI Voice Cloning & Audio Deepfake Detector',
+      img: 'assets/voice-cloning.svg',
+      desc: 'An advanced dual-capability neural audio intelligence system that clones human voice characteristics with high biometric fidelity and performs real-time audio deepfake classification. The system analyzes raw acoustic frequencies and speech patterns to distinguish between authentic human voices and AI-generated synthetic speech, outputting exact authenticity percentage scores, threat likelihood breakdowns, and spectrogram forensic evidence.',
+      cracked: [
+        'Acoustic Feature Extraction: Built Mel-frequency cepstral coefficients (MFCCs) and spectral flux pipelines using Librosa & Python to isolate synthetic vocoder artifacts.',
+        'Hybrid Classifier Architecture: Engineered and trained a CNN + BiLSTM model detecting micro-tremor deviations and synthetic speech synthesis traces.',
+        'Probabilistic Risk Scoring Engine: Implemented statistical risk models calculating real-time authenticity percentage (e.g. 98.4% AI Voice vs Authentic Human) and spoofing threat levels.',
+        'Interactive Forensics Dashboard: Developed real-time waveform visualizer, audio recorder/uploader, and risk evaluation meters.'
+      ],
+      tags: ['Python', 'PyTorch', 'Librosa', 'Deep Learning', 'Audio DSP', 'Voice Cloning', 'Deepfake Detection', 'FastAPI']
     },
     '2': {
-      title: 'NeuralVision AI Data Analytics Suite',
-      img: 'assets/project2.jpg',
-      desc: 'Real-time AI analytics dashboard visualizing millions of live telemetry events using 3D chart surfaces, WebGL canvas shaders, Node.js backend pipelines, and WebSocket telemetry streaming.',
-      tags: ['WebGL Data Viz', 'Node.js', 'WebSockets', 'Tailwind CSS', 'Python']
-    },
-    '3': {
-      title: 'Nexus XR WebGL E-Commerce Platform',
-      img: 'assets/project3.jpg',
-      desc: 'Immersive WebXR 3D product showcase enabling consumers to view digital twin items in full 360-degree interactive 3D, customize colors in real-time, and project products directly into their room via WebXR AR camera APIs.',
-      tags: ['WebXR', 'Three.js', 'Canvas API', 'Stripe API', 'GSAP']
+      title: 'NetAudit.AI - Intelligent Config & Conflict File Auditor',
+      img: 'assets/netaudit.svg',
+      desc: 'An automated AI-driven network configuration and multi-file conflict resolution platform. Ingests Git merge conflict files (<<<<<<<, =======, >>>>>>>) and network configuration scripts (BGP, OSPF, ACLs, YAML, JSON). The platform pinpoints exact syntax faults and collisions line-by-line, details the root cause of network failure risks, and automatically synthesizes conflict-free, production-ready configuration patches with side-by-side visual diffs.',
+      cracked: [
+        'AST & Conflict Parser: Created custom tokenizer to scan multi-branch conflict files and nested network configuration blocks without syntax corruption.',
+        'Diagnostic Engine: Formulated heuristic and AI rules detecting IP collisions, overlapping subnets, routing blackholes, and contradictory firewall ACL policies.',
+        'Automated Patch Synthesizer: Built the resolution algorithm that synthesizes verified, conflict-free configuration files ready for deployment.',
+        'Visual Diff Inspection: Developed interactive "What to Change" side-by-side comparison UI with color-coded syntax highlights and fault mitigation reports.'
+      ],
+      tags: ['Python', 'AI Diagnostics', 'Network Systems', 'Git Conflict Engine', 'AST Parsing', 'Diff Generator', 'JavaScript']
     }
   };
 
@@ -315,9 +323,24 @@ function initModals() {
         modalImg.src = data.img;
         modalDesc.textContent = data.desc;
 
+        if (modalCracked && data.cracked) {
+          modalCracked.innerHTML = `
+            <div class="project-cracked-box ${id === '2' ? 'purple-accent' : ''}" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              <div class="project-cracked-header">
+                <i data-lucide="zap"></i> What I Built &amp; Cracked
+              </div>
+              <ul class="project-cracked-list">
+                ${data.cracked.map(point => `<li><i data-lucide="check-circle-2"></i> <span>${point}</span></li>`).join('')}
+              </ul>
+            </div>
+          `;
+        }
+
         modalTags.innerHTML = data.tags
           .map(t => `<span class="tag">${t}</span>`)
           .join('');
+
+        if (window.lucide) lucide.createIcons();
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -406,4 +429,32 @@ function initNavbarScroll() {
       }
     });
   });
+}
+
+/* ==========================================================================
+   LIVE REAL-TIME CLOCK FOR LOCATION BAR (IST / KOLKATA)
+   ========================================================================== */
+function initLiveClock() {
+  const clockEl = document.getElementById('live-ist-clock');
+  if (!clockEl) return;
+
+  function update() {
+    const now = new Date();
+    const options = {
+      timeZone: 'Asia/Kolkata',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    try {
+      const timeStr = new Intl.DateTimeFormat('en-IN', options).format(now);
+      clockEl.textContent = `${timeStr} IST`;
+    } catch (e) {
+      clockEl.textContent = now.toLocaleTimeString() + ' IST';
+    }
+  }
+
+  update();
+  setInterval(update, 1000);
 }

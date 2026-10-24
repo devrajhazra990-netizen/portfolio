@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#0a0f1d" />
+    </linearGradient>
+
+    <!-- Neon Gradients -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="red-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#fb7185" />
+    </linearGradient>
+
+    <linearGradient id="green-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 243, 255, 0.05)" stroke-width="1" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neon-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+  <rect width="800" height="450" fill="url(#cyber-grid)" />
+
+  <!-- Top Glass Terminal Bar -->
+  <rect x="30" y="25" width="740" height="40" rx="8" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(255, 255, 255, 0.1)" />
+  <circle cx="55" cy="45" r="5" fill="#f43f5e" />
+  <circle cx="72" cy="45" r="5" fill="#f59e0b" />
+  <circle cx="89" cy="45" r="5" fill="#10b981" />
+  <text x="120" y="50" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12">AI_VOICE_DETECTOR_ENGINE // AUDIO_STREAM_CLASSIFIER_V2.4</text>
+  <rect x="630" y="35" width="120" height="20" rx="10" fill="rgba(244, 63, 94, 0.15)" stroke="#f43f5e" stroke-width="1" />
+  <text x="690" y="49" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">LIVE INFERENCE</text>
+
+  <!-- Left Card: Spectral Waveform & Cloned Voice Analysis -->
+  <rect x="30" y="80" width="460" height="250" rx="12" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(0, 243, 255, 0.2)" />
+  <text x="50" y="110" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="bold">Audio Waveform &amp; Timbre Spectral Fingerprint</text>
+  <text x="50" y="128" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11">Sampling: 44.1 kHz • Neural Vocoder Pitch Contour Tracking</text>
+
+  <!-- Oscilloscope / Waveform Lines -->
+  <path d="M 50 200 Q 80 150, 110 200 T 170 200 T 230 130 T 270 250 T 320 180 T 370 220 T 420 160 T 470 200" fill="none" stroke="#00f3ff" stroke-width="3" filter="url(#neon-blur)" />
+  <path d="M 50 200 Q 90 230, 130 200 T 190 240 T 250 160 T 290 220 T 340 190 T 390 230 T 440 170 T 470 200" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.6" />
+
+  <!-- Spectrum Frequency Bars (Spectrogram) -->
+  <g transform="translate(50, 260)">
+    <rect x="0" y="25" width="8" height="25" rx="3" fill="#00f3ff" opacity="0.4" />
+    <rect x="14" y="15" width="8" height="35" rx="3" fill="#00f3ff" opacity="0.6" />
+    <rect x="28" y="5" width="8" height="45" rx="3" fill="#00f3ff" opacity="0.8" />
+    <rect x="42" y="18" width="8" height="32" rx="3" fill="#00f3ff" opacity="0.5" />
+    <rect x="56" y="2" width="8" height="48" rx="3" fill="#a855f7" opacity="0.9" />
+    <rect x="70" y="12" width="8" height="38" rx="3" fill="#a855f7" opacity="0.7" />
+    <rect x="84" y="28" width="8" height="22" rx="3" fill="#a855f7" opacity="0.5" />
+    <rect x="98" y="8" width="8" height="42" rx="3" fill="#f43f5e" opacity="0.8" />
+    <rect x="112" y="20" width="8" height="30" rx="3" fill="#f43f5e" opacity="0.6" />
+    <rect x="126" y="0" width="8" height="50" rx="3" fill="#f43f5e" opacity="0.9" />
+    <rect x="140" y="14" width="8" height="36" rx="3" fill="#f43f5e" opacity="0.7" />
+    <rect x="154" y="22" width="8" height="28" rx="3" fill="#00f3ff" opacity="0.5" />
+    <rect x="168" y="6" width="8" height="44" rx="3" fill="#00f3ff" opacity="0.8" />
+    <rect x="182" y="16" width="8" height="34" rx="3" fill="#3b82f6" opacity="0.7" />
+    <rect x="196" y="2" width="8" height="48" rx="3" fill="#a855f7" opacity="0.9" />
+    <rect x="210" y="10" width="8" height="40" rx="3" fill="#a855f7" opacity="0.8" />
+    <rect x="224" y="24" width="8" height="26" rx="3" fill="#f43f5e" opacity="0.6" />
+    <rect x="238" y="4" width="8" height="46" rx="3" fill="#f43f5e" opacity="0.9" />
+    <rect x="252" y="15" width="8" height="35" rx="3" fill="#00f3ff" opacity="0.7" />
+    <rect x="266" y="26" width="8" height="24" rx="3" fill="#00f3ff" opacity="0.5" />
+    <rect x="280" y="10" width="8" height="40" rx="3" fill="#a855f7" opacity="0.8" />
+    <rect x="294" y="5" width="8" height="45" rx="3" fill="#a855f7" opacity="0.9" />
+    <rect x="308" y="18" width="8" height="32" rx="3" fill="#3b82f6" opacity="0.6" />
+    <rect x="322" y="12" width="8" height="38" rx="3" fill="#00f3ff" opacity="0.7" />
+    <rect x="336" y="22" width="8" height="28" rx="3" fill="#f43f5e" opacity="0.6" />
+    <rect x="350" y="2" width="8" height="48" rx="3" fill="#f43f5e" opacity="0.9" />
+    <rect x="364" y="14" width="8" height="36" rx="3" fill="#00f3ff" opacity="0.7" />
+    <rect x="378" y="20" width="8" height="30" rx="3" fill="#a855f7" opacity="0.6" />
+    <rect x="392" y="8" width="8" height="42" rx="3" fill="#00f3ff" opacity="0.8" />
+    <rect x="406" y="25" width="8" height="25" rx="3" fill="#3b82f6" opacity="0.5" />
+  </g>
+
+  <!-- Right Top Card: Authenticity Percentage & Probability Gauge -->
+  <rect x="510" y="80" width="260" height="160" rx="12" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(244, 63, 94, 0.3)" />
+  <text x="530" y="110" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">AI DEEPFAKE PROBABILITY</text>
+  
+  <text x="530" y="155" fill="#f43f5e" font-family="'Space Grotesk', sans-serif" font-size="36" font-weight="bold" filter="url(#neon-blur)">98.4%</text>
+  <text x="645" y="150" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="bold">FAKE AI</text>
+  <text x="645" y="165" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">Human: 1.6%</text>
+
+  <!-- Progress bar -->
+  <rect x="530" y="180" width="220" height="10" rx="5" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="530" y="180" width="216" height="10" rx="5" fill="url(#red-glow)" />
+
+  <text x="530" y="215" fill="#fb7185" font-family="'JetBrains Mono', monospace" font-size="11">⚠️ Synthetic Vocoder Artifacts Detected</text>
+
+  <!-- Right Bottom Card: Risk & Rest Likelihood Assessment -->
+  <rect x="510" y="255" width="260" height="165" rx="12" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(0, 243, 255, 0.25)" />
+  <text x="530" y="280" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">CHANCE OF RISK / THREAT SCORE</text>
+
+  <!-- Risk Metric Meters -->
+  <g transform="translate(530, 295)">
+    <text x="0" y="12" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="11">Spoofing Risk:</text>
+    <text x="170" y="12" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">CRITICAL</text>
+    <rect x="0" y="20" width="220" height="6" rx="3" fill="rgba(255, 255, 255, 0.1)" />
+    <rect x="0" y="20" width="195" height="6" rx="3" fill="#f43f5e" />
+
+    <text x="0" y="44" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="11">Acoustic Naturalness:</text>
+    <text x="180" y="44" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">12.5%</text>
+    <rect x="0" y="52" width="220" height="6" rx="3" fill="rgba(255, 255, 255, 0.1)" />
+    <rect x="0" y="52" width="28" height="6" rx="3" fill="#f59e0b" />
+
+    <text x="0" y="76" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="11">Biometric Confidence:</text>
+    <text x="180" y="76" fill="#00f3ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">99.1%</text>
+    <rect x="0" y="84" width="220" height="6" rx="3" fill="rgba(255, 255, 255, 0.1)" />
+    <rect x="0" y="84" width="218" height="6" rx="3" fill="#00f3ff" />
+  </g>
+
+  <!-- Bottom Panel: Voice Cloning & Real-Time Classification Status -->
+  <rect x="30" y="345" width="460" height="75" rx="10" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(255, 255, 255, 0.08)" />
+  <g transform="translate(50, 360)">
+    <circle cx="10" cy="12" r="6" fill="#00f3ff" filter="url(#neon-blur)" />
+    <text x="25" y="16" fill="#f8fafc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="bold">Neural Voice Cloning &amp; Synthesis Pipeline</text>
+    <text x="25" y="36" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Features: Few-Shot Target Cloning | MFCC Feature Extraction | Pitch Deviation Matrix</text>
+  </g>
+</svg>
