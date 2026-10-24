@@ -288,7 +288,7 @@ function initModals() {
   const projectDetails = {
     '1': {
       title: 'AI Voice Cloning & Audio Deepfake Detector',
-      img: 'assets/voice-cloning.svg',
+      img: new URL('./assets/voice-cloning.svg', import.meta.url).href,
       desc: 'An advanced dual-capability neural audio intelligence system that clones human voice characteristics with high biometric fidelity and performs real-time audio deepfake classification. The system analyzes raw acoustic frequencies and speech patterns to distinguish between authentic human voices and AI-generated synthetic speech, outputting exact authenticity percentage scores, threat likelihood breakdowns, and spectrogram forensic evidence.',
       cracked: [
         'Acoustic Feature Extraction: Built Mel-frequency cepstral coefficients (MFCCs) and spectral flux pipelines using Librosa & Python to isolate synthetic vocoder artifacts.',
@@ -300,7 +300,7 @@ function initModals() {
     },
     '2': {
       title: 'NetAudit.AI - Intelligent Config & Conflict File Auditor',
-      img: 'assets/netaudit.svg',
+      img: new URL('./assets/netaudit.svg', import.meta.url).href,
       desc: 'An automated AI-driven network configuration and multi-file conflict resolution platform. Ingests Git merge conflict files (<<<<<<<, =======, >>>>>>>) and network configuration scripts (BGP, OSPF, ACLs, YAML, JSON). The platform pinpoints exact syntax faults and collisions line-by-line, details the root cause of network failure risks, and automatically synthesizes conflict-free, production-ready configuration patches with side-by-side visual diffs.',
       cracked: [
         'AST & Conflict Parser: Created custom tokenizer to scan multi-branch conflict files and nested network configuration blocks without syntax corruption.',
